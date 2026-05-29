@@ -97,7 +97,7 @@ namespace POE_PART2
                        memoryRecall;
             }
 
-            // Purpose question
+            // Purpose Question
             if (input.Contains("purpose"))
             {
                 return "💜 My purpose is to help users stay safe online.";
