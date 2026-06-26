@@ -70,6 +70,26 @@ namespace POE_PART2
                     "🔒 A VPN encrypts your internet connection.",
                     "✨ VPNs are useful when using public Wi-Fi."
                 }
+            },
+
+            {
+                "social engineering",
+                new List<string>()
+                {
+                    "⚠ Social engineering attacks manipulate people into revealing sensitive information.",
+                    "💜 Always verify who you are communicating with online.",
+                    "🔒 Never share personal details with strangers."
+                }
+            },
+
+            {
+                "safe browsing",
+                new List<string>()
+                {
+                    "🌐 Only visit trusted websites.",
+                    "🔒 Check that websites use HTTPS before entering personal information.",
+                    "⚠ Avoid downloading files from unknown sources."
+                }
             }
         };
 

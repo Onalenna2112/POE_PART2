@@ -1,0 +1,305 @@
+USER: hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: how are you
+BOT: ✨ I'm functioning perfectly and ready to help!
+USER: passwords
+BOT: 🔐 Never reuse the same password for multiple accounts.
+
+BOT: 📧 Never click suspicious email links.
+BOT: ✅ Correct! Passwords should never be shared.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+BOT: USER: hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: how are you
+BOT: ✨ I'm functioning perfectly and ready to help!
+USER: passwords
+BOT: 🔐 Never reuse the same password for multiple accounts.
+
+BOT: 📧 Never click suspicious email links.
+BOT: ✅ Correct! Passwords should never be shared.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+
+USER: hi
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: how are you
+BOT: ✨ I'm functioning perfectly and ready to help!
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: passwords
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+
+USER: scams
+BOT: 💸 Online scams often create panic to trick victims.
+
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+BOT: 📧 Never click suspicious email links.
+BOT: ✅ Correct! Passwords should never be shared.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+BOT: USER: hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: how are you
+BOT: ✨ I'm functioning perfectly and ready to help!
+USER: passwords
+BOT: 🔐 Never reuse the same password for multiple accounts.
+
+BOT: 📧 Never click suspicious email links.
+BOT: ✅ Correct! Passwords should never be shared.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+BOT: USER: hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: how are you
+BOT: ✨ I'm functioning perfectly and ready to help!
+USER: passwords
+BOT: 🔐 Never reuse the same password for multiple accounts.
+
+BOT: 📧 Never click suspicious email links.
+BOT: ✅ Correct! Passwords should never be shared.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+
+USER: hi
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: how are you
+BOT: ✨ I'm functioning perfectly and ready to help!
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: passwords
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+
+USER: scams
+BOT: 💸 Online scams often create panic to trick victims.
+
+USER: phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+BOT: 📧 Never click suspicious email links.
+BOT: ✅ Correct! Passwords should never be shared.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+
+USER: Phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: malware
+BOT: ⚠ Avoid downloading files from unknown websites.
+
+USER: what is phishing?
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: What are vpns
+BOT: 🔒 A VPN encrypts your internet connection.
+
+USER: How can i protect myself from malware
+BOT: ⚠ Avoid downloading files from unknown websites.
+
+BOT: 🎯 Quiz Complete! Your score: 5/5
+BOT: 🏆 Excellent! You're very cyber-aware!
+BOT: 🎯 Quiz Complete! Your score: 4/5
+BOT: ✨ Good job! Your cybersecurity knowledge is improving.
+BOT: 🦠 Keep your antivirus software updated.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+USER: password
+BOT: 💜 Password managers can help you store passwords safely.
+
+USER: privacy
+BOT: 🔒 Review your privacy settings regularly.
+
+USER: i am worried about scams
+BOT: 💜 It's okay to feel worried. Cybersecurity can be overwhelming sometimes.
+BOT: 🔐 Use strong passwords with symbols and numbers.
+BOT: 🎯 Quiz Complete! Your score: 2/5
+BOT: ⚠ You should learn more about cybersecurity safety.
+USER: password
+BOT: 💜 Password managers can help you store passwords safely.
+
+USER: password
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+
+USER: What is malware
+BOT: ⚠ Avoid downloading files from unknown websites.
+
+USER: I am worried about scams
+BOT: 💜 It's okay to feel worried. Cybersecurity can be overwhelming sometimes.
+USER: I am intereseted in privacy
+BOT: ✨ Avoid sharing personal information publicly online.
+
+USER: password
+BOT: 💜 Password managers can help you store passwords safely.
+
+USER: I am worried about scams
+BOT: 💜 It's okay to feel worried. Cybersecurity can be overwhelming sometimes.
+BOT: 🔐 Use strong passwords with symbols and numbers.
+BOT: 🎯 Quiz Complete! Your score: 2/5
+BOT: ⚠ You should learn more about cybersecurity safety.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+USER: HELLO
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: PASSWORD
+BOT: 🔐 Never reuse the same password for multiple accounts.
+
+USER: I am worried
+BOT: 💜 It's okay to feel worried. Cybersecurity can be overwhelming sometimes.
+BOT: 🦠 Keep your antivirus software updated.
+BOT: 🎯 Quiz Complete! Your score: 3/5
+BOT: ✨ Good job! Your cybersecurity knowledge is improving.
+BOT: 📚 Available Topics:
+
+• Password Safety
+• Phishing
+• Online Scams
+• Privacy
+• Malware
+• VPNs
+• Safe Browsing
+• Social Engineering
+USER: Good evening
+BOT: ❓ I didn't fully understand that. Please try rephrasing your question.
+USER: Good morning
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: Hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+BOT: 🎯 Quiz Complete! Your score: 8/10
+BOT: ✨ Great job! You have good cybersecurity knowledge.
+USER: Hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: My name is Rea
+BOT: 💜 Nice to meet you, rea!
+USER: I am interested in Phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: Tell me more
+BOT: ✨ Could you tell me which topic you'd like to know more about?
+USER: Phishing
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: What can you help with?
+BOT: 📚 Available Topics:
+
+            • Password Safety
+            • Phishing
+            • Online Scams
+            • Privacy
+            • Malware
+            • VPNs
+            • Safe Browsing
+            • Social Engineering
+USER: Give me a tip
+BOT: 📧 Never click suspicious email links.
+USER: Test my knowledge
+BOT: 📝 Click the QUIZ button to test your cybersecurity knowledge!
+USER: add task change my password
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+
+USER: add task update antivirus
+BOT: ✅ Task added: update antivirus
+USER: show tasks
+BOT: 1. ❌ update antivirus
+
+USER: complete task 1
+BOT: ✅ Task 1 marked as completed.
+USER: delete task 1
+BOT: 🗑 Task 1 deleted.
+BOT: 🎯 Quiz Complete! Your score: 8/10
+BOT: ✨ Great work! You have strong cybersecurity knowledge.
+USER: add task - preview settings
+BOT: ✅ Task added: - preview settings
+USER: can you remind me to update my password?
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+
+USER: Hello
+BOT: ✨ Hello! How can I help you with cybersecurity today?
+USER: Remind me to update my password
+BOT: 💜 Password managers can help you store passwords safely.
+
+USER: Remind me to update my password tomorrow
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+
+BOT: 🎯 Quiz Complete! Your score: 3/15
+BOT: ⚠ You should review basic cybersecurity concepts.
+BOT: 🎮 Starting your Cybersecurity Quiz Challenge! Answer the popup prompts...
+BOT: 🎯 Quiz Complete! Your final score: 3/12
+BOT: ⚠ Critical Vulnerability Alert! Please carefully study system topics to secure your infrastructure.
+USER: please remind me to update my password tomorrow
+BOT: ⏰ Reminder set for 'please  update my password' on tomorrow's date.
+BOT: 🎮 Starting your Cybersecurity Quiz Challenge! Please follow the popup prompts...
+BOT: ⚠ Quiz session abandoned by user.
+USER: Please remind me to update my password after 3 days
+BOT: 🔐 Never reuse the same password for multiple accounts.
+
+USER: Please remind me to update my password after 7 days
+BOT: ✨ Use strong passwords with symbols, numbers and uppercase letters.
+

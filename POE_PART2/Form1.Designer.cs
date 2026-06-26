@@ -34,10 +34,10 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTip = new System.Windows.Forms.Button();
-            this.btnQuiz = new System.Windows.Forms.Button();
-            this.btnTopics = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
+            this.btnTopics = new System.Windows.Forms.Button();
+            this.btnQuiz = new System.Windows.Forms.Button();
+            this.btnTip = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,33 +117,19 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnTip
+            // btnHistory
             // 
-            this.btnTip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
-            this.btnTip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTip.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTip.ForeColor = System.Drawing.Color.Cyan;
-            this.btnTip.Location = new System.Drawing.Point(77, 34);
-            this.btnTip.Name = "btnTip";
-            this.btnTip.Size = new System.Drawing.Size(75, 50);
-            this.btnTip.TabIndex = 0;
-            this.btnTip.Text = "Random Tip";
-            this.btnTip.UseVisualStyleBackColor = false;
-            this.btnTip.Click += new System.EventHandler(this.btnTip_Click);
-            // 
-            // btnQuiz
-            // 
-            this.btnQuiz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
-            this.btnQuiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuiz.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuiz.ForeColor = System.Drawing.Color.Cyan;
-            this.btnQuiz.Location = new System.Drawing.Point(77, 139);
-            this.btnQuiz.Name = "btnQuiz";
-            this.btnQuiz.Size = new System.Drawing.Size(75, 50);
-            this.btnQuiz.TabIndex = 1;
-            this.btnQuiz.Text = "Quiz";
-            this.btnQuiz.UseVisualStyleBackColor = false;
-            this.btnQuiz.Click += new System.EventHandler(this.btnQuiz_Click);
+            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistory.ForeColor = System.Drawing.Color.Cyan;
+            this.btnHistory.Location = new System.Drawing.Point(77, 366);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(75, 50);
+            this.btnHistory.TabIndex = 3;
+            this.btnHistory.Text = "History";
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnTopics
             // 
@@ -159,19 +145,33 @@
             this.btnTopics.UseVisualStyleBackColor = false;
             this.btnTopics.Click += new System.EventHandler(this.btnTopics_Click);
             // 
-            // btnHistory
+            // btnQuiz
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.ForeColor = System.Drawing.Color.Cyan;
-            this.btnHistory.Location = new System.Drawing.Point(77, 366);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(75, 50);
-            this.btnHistory.TabIndex = 3;
-            this.btnHistory.Text = "History";
-            this.btnHistory.UseVisualStyleBackColor = false;
-            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            this.btnQuiz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
+            this.btnQuiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuiz.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuiz.ForeColor = System.Drawing.Color.Cyan;
+            this.btnQuiz.Location = new System.Drawing.Point(77, 139);
+            this.btnQuiz.Name = "btnQuiz";
+            this.btnQuiz.Size = new System.Drawing.Size(75, 50);
+            this.btnQuiz.TabIndex = 1;
+            this.btnQuiz.Text = "Quiz";
+            this.btnQuiz.UseVisualStyleBackColor = false;
+            this.btnQuiz.Click += new System.EventHandler(this.btnQuiz_Click);
+            // 
+            // btnTip
+            // 
+            this.btnTip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(45)))));
+            this.btnTip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTip.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTip.ForeColor = System.Drawing.Color.Cyan;
+            this.btnTip.Location = new System.Drawing.Point(77, 34);
+            this.btnTip.Name = "btnTip";
+            this.btnTip.Size = new System.Drawing.Size(75, 50);
+            this.btnTip.TabIndex = 0;
+            this.btnTip.Text = "Random Tip";
+            this.btnTip.UseVisualStyleBackColor = false;
+            this.btnTip.Click += new System.EventHandler(this.btnTip_Click);
             // 
             // Form1
             // 
@@ -186,6 +186,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cybersecurity Awareness Bot";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

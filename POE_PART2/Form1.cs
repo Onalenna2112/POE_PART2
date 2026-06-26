@@ -2,11 +2,14 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace POE_PART2
 {
     public partial class Form1 : Form
     {
+        private string historyPath = Path.Combine(Application.StartupPath, "history.txt");
+
         public Form1()
         {
             InitializeComponent();
@@ -14,42 +17,32 @@ namespace POE_PART2
             // Play greeting audio
             AudioPlayer.PlayGreeting();
 
-            // Display ASCII art
+            // Display ASCII art welcome message
             DisplayWelcomeMessage();
         }
 
-        // Welcome display
+        // Welcome display layout configuration
         private void DisplayWelcomeMessage()
         {
             rtbChat.Clear();
 
             rtbChat.SelectionColor = Color.Cyan;
-
             rtbChat.AppendText(UIHelper.GetAsciiArt());
-
             rtbChat.AppendText(UIHelper.Divider());
-
             rtbChat.AppendText(Environment.NewLine);
 
-            UIHelper.TypeText(
-                rtbChat,
-                "💜 Welcome to the Cybersecurity Awareness Bot!",
-                Color.Pink);
-
-            UIHelper.TypeText(
-                rtbChat,
-                "✨ Ask me about passwords, scams, phishing, privacy, malware or VPNs.",
-                Color.White);
+            UIHelper.TypeText(rtbChat, "💜 Welcome to the Cybersecurity Awareness Bot!", Color.Pink);
+            UIHelper.TypeText(rtbChat, "✨ Ask me about passwords, scams, phishing, privacy, malware or VPNs.", Color.White);
 
             rtbChat.AppendText(Environment.NewLine);
         }
 
-        // SEND BUTTON
+        // SEND MESSAGE BUTTON HANDLER
         private void btnSend_Click(object sender, EventArgs e)
         {
-            string input = txtUserInput.Text;
+            string input = txtUserInput.Text.Trim();
 
-            // Validate input
+            // Validate user textual input
             if (!InputHandler.IsValidInput(input))
             {
                 MessageBox.Show(
@@ -57,77 +50,75 @@ namespace POE_PART2
                     "Input Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-
                 return;
             }
 
-            // Display user message
+            // Display user message to history rich text panel
             DisplayUserMessage(input);
 
-            // Get chatbot response
+            // Fetch processed data matrix back from NLP/Keyword system
             string response = Chatbot.GetResponse(input);
 
-            // Display bot response
+            // Run typewriter thread for clean bot display
             DisplayBotMessage(response);
 
-            // Clear textbox
+            // Flush out active entry container box
             txtUserInput.Clear();
 
-            // Exit app if user types exit
+            // Safely wind down the application container if explicitly commanded
             if (input.ToLower().Contains("exit"))
             {
                 Application.Exit();
             }
         }
 
-        // USER MESSAGE
         private void DisplayUserMessage(string message)
         {
             rtbChat.SelectionColor = Color.White;
+            rtbChat.AppendText($"🧑 You: {message}{Environment.NewLine}{Environment.NewLine}");
 
-            rtbChat.AppendText(
-                "🧑 You: " + message + Environment.NewLine + Environment.NewLine);
-            File.AppendAllText(
-    Application.StartupPath + @"\history.txt",
-    "USER: " + message + Environment.NewLine);
+            try
+            {
+                File.AppendAllText(historyPath, $"USER: {message}{Environment.NewLine}");
+            }
+            catch (Exception ex)
+            {
+                // Gracefully catch potential file access locks without interrupting user flow
+                System.Diagnostics.Debug.WriteLine($"History append fail: {ex.Message}");
+            }
         }
 
-        // BOT MESSAGE
         private void DisplayBotMessage(string message)
         {
-            UIHelper.TypeText(
-                rtbChat,
-                "🤖 CyberBot: " + message,
-                Color.Cyan);
-            File.AppendAllText(
-    Application.StartupPath + @"\history.txt",
-    "BOT: " + message + Environment.NewLine);
+            UIHelper.TypeText(rtbChat, $"🤖 CyberBot: {message}", Color.Cyan);
+
+            try
+            {
+                File.AppendAllText(historyPath, $"BOT: {message}{Environment.NewLine}");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"History append fail: {ex.Message}");
+            }
         }
 
-        // CLEAR CHAT BUTTON
         private void btnClear_Click(object sender, EventArgs e)
         {
             DisplayWelcomeMessage();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnTip_Click(object sender, EventArgs e)
         {
             string[] tips =
-{
-    "🔐 Use strong passwords with symbols and numbers.",
-    "📧 Never click suspicious email links.",
-    "🌐 Avoid using public Wi-Fi without a VPN.",
-    "🦠 Keep your antivirus software updated.",
-    "💜 Enable two-factor authentication for extra security."
-};
+            {
+                "🔐 Use strong passwords with symbols and numbers.",
+                "📧 Never click suspicious email links.",
+                "🌐 Avoid using public Wi-Fi without a VPN.",
+                "🦠 Keep your antivirus software updated.",
+                "💜 Enable two-factor authentication for extra security."
+            };
 
             Random random = new Random();
-
             int index = random.Next(tips.Length);
 
             DisplayBotMessage(tips[index]);
@@ -136,27 +127,22 @@ namespace POE_PART2
         private void btnTopics_Click(object sender, EventArgs e)
         {
             DisplayBotMessage(
-@"📚 Available Topics:
-
-• Password Safety
-• Phishing
-• Online Scams
-• Privacy
-• Malware
-• VPNs
-• Safe Browsing
-• Social Engineering");
+                "📚 Available Topics:\n\n" +
+                "• Password Safety\n" +
+                "• Phishing\n" +
+                "• Online Scams\n" +
+                "• Privacy\n" +
+                "• Malware\n" +
+                "• VPNs\n" +
+                "• Safe Browsing\n" +
+                "• Social Engineering");
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            string historyPath =
-    Application.StartupPath + @"\history.txt";
-
             if (File.Exists(historyPath))
             {
                 string history = File.ReadAllText(historyPath);
-
                 DisplayBotMessage(history);
             }
             else
@@ -165,95 +151,75 @@ namespace POE_PART2
             }
         }
 
+        // INTERACTIVE QUIZ ENGINE - INTEGRATED WITH QUIZMANAGER & ACTIVITYLOG
         private void btnQuiz_Click(object sender, EventArgs e)
         {
-            int score = 0;
+            // Initialize session state
+            QuizManager.StartQuiz();
 
-            // QUESTION 1
-            DialogResult q1 =
-                MessageBox.Show(
-                "❓ Is it safe to share your password with friends?",
-                "Question 1",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            DisplayBotMessage("🎮 Starting your Cybersecurity Quiz Challenge! Please follow the popup prompts...");
 
-            if (q1 == DialogResult.No)
+            for (int i = 0; i < QuizManager.Questions.Count; i++)
             {
-                score++;
+                QuizQuestion currentQ = QuizManager.Questions[i];
+
+                // Dynamically guide user response syntax based on question position
+                string promptGuidance = (i < 6)
+                    ? "\n\nType your choice (A, B, C, or D):"
+                    : "\n\nType True or False (or T/F):";
+
+                // Request user response input string safely
+                string rawInput = Interaction.InputBox(
+                    currentQ.Question + promptGuidance,
+                    $"Quiz Question {i + 1} of {QuizManager.Questions.Count}"
+                );
+
+                // If user hits 'Cancel' or escapes the prompt box, abort quiz progression cleanly
+                if (string.IsNullOrEmpty(rawInput))
+                {
+                    DisplayBotMessage("⚠ Quiz session abandoned by user.");
+                    ActivityLog.Add("Quiz session canceled prematurely by user.");
+                    return;
+                }
+
+                // Push submission back down to management layer for safe evaluation
+                bool wasCorrect = QuizManager.SubmitAnswer(rawInput);
+
+                if (wasCorrect)
+                {
+                    MessageBox.Show("✅ Correct answer!", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"❌ Incorrect. The right answer was: {currentQ.Answer.ToUpper()}", "Result", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
 
-            // QUESTION 2
-            DialogResult q2 =
-                MessageBox.Show(
-                "❓ Should you click suspicious email links?",
-                "Question 2",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            // Generate feedback summary directly derived from metrics
+            int finalScore = QuizManager.Score;
+            int totalQuestions = QuizManager.Questions.Count;
 
-            if (q2 == DialogResult.No)
+            DisplayBotMessage($"🎯 Quiz Complete! Your final score: {finalScore}/{totalQuestions}");
+
+            if (finalScore == totalQuestions)
             {
-                score++;
+                DisplayBotMessage("🏆 Flawless Victory! You possess elite cybersecurity defense instincts!");
             }
-
-            // QUESTION 3
-            DialogResult q3 =
-                MessageBox.Show(
-                "❓ Is two-factor authentication useful?",
-                "Question 3",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (q3 == DialogResult.Yes)
+            else if (finalScore >= (totalQuestions * 0.75))
             {
-                score++;
+                DisplayBotMessage("✨ Excellent job! Your knowledge provides strong defense coverage online.");
             }
-
-            // QUESTION 4
-            DialogResult q4 =
-                MessageBox.Show(
-                "❓ Should you use the same password everywhere?",
-                "Question 4",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (q4 == DialogResult.No)
+            else if (finalScore >= (totalQuestions * 0.5))
             {
-                score++;
-            }
-
-            // QUESTION 5
-            DialogResult q5 =
-                MessageBox.Show(
-                "❓ Is public Wi-Fi always secure?",
-                "Question 5",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (q5 == DialogResult.No)
-            {
-                score++;
-            }
-
-            // FINAL RESULT
-            DisplayBotMessage(
-                $"🎯 Quiz Complete! Your score: {score}/5");
-
-            // PERFORMANCE FEEDBACK
-            if (score == 5)
-            {
-                DisplayBotMessage(
-                    "🏆 Excellent! You're very cyber-aware!");
-            }
-            else if (score >= 3)
-            {
-                DisplayBotMessage(
-                    "✨ Good job! Your cybersecurity knowledge is improving.");
+                DisplayBotMessage("👍 Good effort! Review the bot topics to reinforce weak structural points.");
             }
             else
             {
-                DisplayBotMessage(
-                    "⚠ You should learn more about cybersecurity safety.");
+                DisplayBotMessage("⚠ Critical Vulnerability Alert! Please carefully study system topics to secure your device infrastructure.");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
     }
 }
