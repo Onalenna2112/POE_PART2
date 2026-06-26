@@ -82,3 +82,64 @@ Steps:
 ## Conclusion
 
 This project demonstrates object-oriented programming, GUI development, event-driven programming, file handling, collections, and chatbot interaction techniques using C# Windows Forms.
+
+POE
+# 🛡️ Cybersecurity Awareness Chatbot
+
+## 📌 Project Name
+Cybersecurity Awareness Chatbot with Task Assistant, Quiz, NLP Simulation, Database Integration, and Activity Logging.
+
+---
+
+## 📖 Project Description
+
+The Cybersecurity Awareness Chatbot is a Windows Forms application developed in C# to educate users about cybersecurity best practices. The chatbot provides information on topics such as passwords, phishing, scams, malware, privacy, and VPNs.
+
+The application also includes:
+
+- A Task Assistant for cybersecurity-related tasks.
+- Reminder functionality with custom dates or timeframes.
+- MySQL database integration.
+- A cybersecurity mini-game/quiz.
+- NLP simulation using keyword detection and string manipulation.
+- Activity logging for user interactions and chatbot actions.
+- Memory management and sentiment analysis.
+
+This project combines the functionality developed across Parts 1, 2, 3, and 4 of the Portfolio of Evidence (POE).
+
+---
+
+## ✨ Features
+
+### 🔐 Cybersecurity Awareness
+The chatbot provides advice on:
+
+- Password Safety
+- Phishing Attacks
+- Online Scams
+- Privacy Protection
+- Malware Prevention
+- VPN Usage
+- Safe Browsing Practices
+- Social Engineering
+
+---
+
+### 📋 Task Assistant
+
+Users can:
+
+- Add cybersecurity tasks
+- View tasks
+- Complete tasks
+- Delete tasks
+- Set reminders
+- Specify dates or timeframes for reminders
+
+Examples:
+
+```text
+Add a task to enable two-factor authentication
+Add a task to review privacy settings
+Remind me to update my password tomorrow
+Remind me in 7 days
