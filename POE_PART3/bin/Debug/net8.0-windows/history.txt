@@ -1,0 +1,3 @@
+BOT: 🎮 Starting your Cybersecurity Quiz Challenge! Please follow the popup prompts...
+BOT: 🎯 Quiz Complete! Your final score: 6/12
+BOT: 👍 Good effort! Review the bot topics to reinforce weak structural points.
